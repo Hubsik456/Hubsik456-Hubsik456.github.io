@@ -1,3 +1,4 @@
+//! Variables
 Notes = [
     {
         "Nazwa": "Algorytmy",
@@ -57,13 +58,13 @@ Notes = [
     */
 ]
 
+//! Functions
 function Generate_Content_HTML_Version_Grid()
 {
     Temp_HTML = ""
 
     for (var x = 0; x < Notes.length; x++)
     {
-        console.log(Notes[x]["Link"])
         Temp_HTML += "<div class='col-sm-4 mt-4 p-4 Note'>"
         Temp_HTML += "<p>"
         Temp_HTML += "<b class='border-bottom border-primary'>" + Notes[x]["Nazwa"] + "</b> <br>"
@@ -79,9 +80,50 @@ function Generate_Content_HTML_Version_Grid()
     document.getElementById("Content").innerHTML = Temp_HTML
 }
 
+function Generate_Content_HTML_Version_Table()
+{
+    Temp_HTML = "<div class='overflow-auto'><table class='table table-hover border border-primary'>"
+
+    for (var x = 0; x < Notes.length; x++)
+    {
+        if (x == 0) // Table Header
+        {
+            Temp_HTML += "<thead class='align-middle text-center'><tr class='table-primary'>"
+            Temp_HTML += "<th>Nazwa</th>"
+            Temp_HTML += "<th>Przedmiot</th>"
+            Temp_HTML += "<th>Semestr</th>"
+            Temp_HTML += "<th>Typ</th>"
+            Temp_HTML += "<th>Data Dodania</th>"
+            Temp_HTML += "<th>Opis</th>"
+            Temp_HTML += "<th>Link</th>"
+            Temp_HTML += "</tr></thead><tbody>"
+        }
+        else
+        {
+            Temp_HTML += "<tr>"
+        }
+        
+        Temp_HTML += "<td>"+Notes[x]["Nazwa"]+"</td>"
+        Temp_HTML += "<td>"+Notes[x]["Przedmiot"]+"</td>"
+        Temp_HTML += "<td>"+Notes[x]["Semestr"]+"</td>"
+        Temp_HTML += "<td>"+Notes[x]["Typ"]+"</td>"
+        Temp_HTML += "<td>"+Notes[x]["Data"]+"</td>"
+        Temp_HTML += "<td>"+Notes[x]["Opis"]+"</td>"
+        Temp_HTML += "<td> <a href='" + Notes[x]["Link"] + "'> <button class='btn btn-primary btn-block'>  "+ "Link" + "</button> </a> </td>"
+        //Temp_HTML += "<td>"+"Link"+"</td>"
+
+
+        Temp_HTML += "</tr>"
+    }
+
+    Temp_HTML += "</tbody></table></div>"
+    document.getElementById("Content").innerHTML = Temp_HTML
+}
+
+//! On Load
 window.addEventListener("load", function()
     {
         Generate_Content_HTML_Version_Grid();
+        //Generate_Content_HTML_Version_Table();
     }
 )
-

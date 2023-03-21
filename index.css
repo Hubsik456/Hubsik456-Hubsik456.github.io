@@ -1,0 +1,6 @@
+.Note {
+    background-color: #f3f3f3;
+}
+input[type="radio"]:checked + label {
+    color: #0d6efd;
+}
