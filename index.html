@@ -28,16 +28,35 @@
             <div class="row">
             <div class="col-sm-3 p-4">
                 <h2>Menu:</h2>
-                <label for="Search"><b>Wyszukiwanie: </b></label>
-                <input id="Search" type="text" class="form-control" placeholder="..." disabled>
+                <label for="Filter_Text"><b>Wyszukiwanie: </b></label>
+
+                <div class="input-group">
+                    <div class="form-floating">
+                        <input id="Filter_Text" type="text" class="form-control" placeholder="..." onkeyup="Filter_Notes()">
+                        <label for="Filter_Text">Wyszukaj</label>
+                    </div>
+
+                    <select id="Filter_Select" class="form-select" name="Filter_Select" onchange="Filter_Notes()">
+                        <option>Nazwa</option>
+                        <option>Przedmiot</option>
+                        <option>Semestr</option>
+                        <option>Typ</option>
+                        <option>Data Dodania</option>
+                        <option>Opis</option>
+                    </select>
+                </div>
+
+                <p><b class="mark">TODO:</b> Filtrowanie działa na razie tylko w widoku tabeli.</p>
+                
                 <hr>
 
-                <p><b>Display as:</b></p>
+                <p><b>Wyświetl Jako:</b></p>
                 <input type="radio" name="Content_Mode" id="CM_Grid" value="Grid" onchange="Generate_Content_HTML_Version_Grid()" checked>
-                <label for="CM_Grid">Grid</label> <br>
+                <label for="CM_Grid">Siatka</label> <br>
 
                 <input type="radio" name="Content_Mode" id="CM_Table" value="Table" onchange="Generate_Content_HTML_Version_Table()">
-                <label for="CM_Table">Table</label>
+                <label for="CM_Table">Tabela</label>
+                <hr>
             </div>
 
             <div class="col-sm-9 p-4">

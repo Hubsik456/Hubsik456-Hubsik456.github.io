@@ -1,13 +1,22 @@
 //! Variables
 Notes = [
     {
-        "Nazwa": "Algorytmy",
+        "Nazwa": "Notatka z Algorytmów",
         "Link": "https://docs.google.com/document/d/19eNd4xV6QiRhcmh-wAF4ircbDa8Jq5B_/edit?usp=share_link&ouid=100657602081476731659&rtpof=true&sd=true",
         "Semestr": "2",
         "Przedmiot": "Algorytmy i Struktury Danych",
         "Typ": "WYK",
         "Opis": "Przepisane notatki odręczne z wykładów do '.docx'.",
         "Data": "16.03.2023",
+    },
+    {
+        "Nazwa": "Notatka z Elektroniki",
+        "Link": "https://docs.google.com/document/d/1cf-Xoxfr3c9sIkuR8FvzDJsy8BFyQtSX/edit?usp=share_link&ouid=100657602081476731659&rtpof=true&sd=true",
+        "Semestr": "2",
+        "Przedmiot": "Matematyka",
+        "Typ": "WYK",
+        "Opis": "Przerobione materiały z elektroniki.<br>TODO: Dokończyć to",
+        "Data": "23.03.2023",
     },
     {
         "Nazwa": "Teoria Ze Statystyki",
@@ -61,6 +70,10 @@ Notes = [
 //! Functions
 function Generate_Content_HTML_Version_Grid()
 {
+    /*
+        Generate HTML code to display notes in form of a grid.
+    */
+
     Temp_HTML = ""
 
     for (var x = 0; x < Notes.length; x++)
@@ -82,7 +95,11 @@ function Generate_Content_HTML_Version_Grid()
 
 function Generate_Content_HTML_Version_Table()
 {
-    Temp_HTML = "<div class='overflow-auto'><table class='table table-hover border border-primary'>"
+    /*
+        Generate HTML code to display notes in form of a table.
+    */
+
+    Temp_HTML = "<div class='overflow-auto'><table class='table table-hover table-striped border border-primary' id='Notes_Table'>"
 
     for (var x = 0; x < Notes.length; x++)
     {
@@ -110,14 +127,66 @@ function Generate_Content_HTML_Version_Table()
         Temp_HTML += "<td>"+Notes[x]["Data"]+"</td>"
         Temp_HTML += "<td>"+Notes[x]["Opis"]+"</td>"
         Temp_HTML += "<td> <a href='" + Notes[x]["Link"] + "'> <button class='btn btn-primary btn-block'>  "+ "Link" + "</button> </a> </td>"
-        //Temp_HTML += "<td>"+"Link"+"</td>"
-
 
         Temp_HTML += "</tr>"
     }
 
     Temp_HTML += "</tbody></table></div>"
     document.getElementById("Content").innerHTML = Temp_HTML
+}
+
+function Filter_Notes()
+{
+    /* 
+        Filter content of Grid/Table depending on user input.
+    */
+    var Dane = {
+        "Nazwa": 0,
+        "Przedmiot": 1,
+        "Semestr": 2,
+        "Typ": 3,
+        "Data Dodania": 4,
+        "Opis": 5,
+    }
+    var Temp_Grid = document.getElementsByClassName("Note")[0]
+    var Temp_Table = document.getElementById("Notes_Table")
+
+    // Widok Siatki
+    if (Temp_Grid !== undefined)
+    {
+        var Blocks = document.getElementsByClassName("Note")
+
+        // for (var x = 0; x < Blocks.length; x++)
+        // {
+        //     // TODO:
+        // }
+    }
+    // Widok Tabeli
+    else if (Temp_Table !== null)
+    {
+        var Input = document.getElementById("Filter_Text").value.toLocaleLowerCase()
+        var Filtr = document.getElementById("Filter_Select").value
+        var Table = document.getElementById("Notes_Table")
+        var Table_tr = Table.getElementsByTagName("tr")
+
+        for (var x = 0; x < Table_tr.length; x++)
+        {
+            var Table_td = Table_tr[x].getElementsByTagName("td")[Dane[Filtr]]
+            if (Table_td)
+            {
+                var Temp  = Table_td.textContent || Table_td.innerText
+                
+                if (Temp.toLocaleLowerCase().indexOf(Input) > -1)
+                {
+                    Table_tr[x].style.display = ""
+                }
+                else
+                {
+                    Table_tr[x].style.display = "none"
+                }
+            }
+        }
+    }
 }
 
 //! On Load
