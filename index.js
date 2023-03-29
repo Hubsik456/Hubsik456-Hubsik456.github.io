@@ -19,6 +19,15 @@ Notes = [
         "Data": "23.03.2023",
     },
     {
+        "Nazwa": "Przykłady Ze Statystyki",
+        "Link": "https://docs.google.com/spreadsheets/d/17hwlTBn-IkXJhLBaB7nV8rdaG35YfZnt/edit?usp=share_link&ouid=100657602081476731659&rtpof=true&sd=true",
+        "Semestr": "2",
+        "Przedmiot": "Podstawy Statystyki",
+        "Typ": "ĆWI",
+        "Opis": "Przerobione przykłady z zajęć.<br>TODO: Do dokończenia",
+        "Data": "29.03.2023",
+    },
+    {
         "Nazwa": "Teoria Ze Statystyki",
         "Link": "https://docs.google.com/document/d/1Gzje4d1ZYVvNb2kEXONHmM_3S0kAlq4t/edit?usp=sharing&ouid=100657602081476731659&rtpof=true&sd=true",
         "Semestr": "2",
