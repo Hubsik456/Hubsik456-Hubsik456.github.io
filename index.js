@@ -60,7 +60,7 @@ Notes = [
         "Semestr": "1",
         "Przedmiot": "WYK",
         "Typ": "LAB",
-        "Opis": "Spis tematów z wykładów z programowania, bardzo ogólikowa.<br>TODO: Przerobić na .docx",
+        "Opis": "Spis tematów z wykładów z programowania, bardzo ogólnikowe.<br>TODO: Przerobić na .docx",
         "Data": "16.03.2023",
     },
     /* Szablon:
