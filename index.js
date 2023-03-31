@@ -37,6 +37,15 @@ Notes = [
         "Data": "16.03.2023",
     },
     {
+        "Nazwa": "Zadania Z Algorytmów",
+        "Link": "https://drive.google.com/file/d/1sYqoEfTUQCq1EdnV5NFZblePH6AJl67M/view?usp=sharing",
+        "Semestr": "2",
+        "Przedmiot": "Algorytmy i Struktury Danych",
+        "Typ": "LAB",
+        "Opis": "Rozwiązania wszystkich zadań z labów z algorytmów.",
+        "Data": "01.04.2023
+    },
+    {
         "Nazwa": "Teoria Z Matematyki",
         "Link": "https://docs.google.com/document/d/18qiJ-BVsH1IBxmOpus3buRlEpXGsl1cd/edit?usp=sharing&ouid=100657602081476731659&rtpof=true&sd=true",
         "Semestr": "2",
