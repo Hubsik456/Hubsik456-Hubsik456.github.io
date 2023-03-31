@@ -43,7 +43,7 @@ Notes = [
         "Przedmiot": "Algorytmy i Struktury Danych",
         "Typ": "LAB",
         "Opis": "Rozwiązania wszystkich zadań z labów z algorytmów.",
-        "Data": "01.04.2023
+        "Data": "01.04.2023",
     },
     {
         "Nazwa": "Teoria Z Matematyki",
