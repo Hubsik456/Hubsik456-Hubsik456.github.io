@@ -37,6 +37,15 @@ Notes = [
         "Data": "16.03.2023",
     },
     {
+        "Nazwa": "Teoria Ze Statystyki v2",
+        "Link": "https://docs.google.com/document/d/1L32b-rZIlhvIkiqviny2vlYLI7Kgmbpk/edit?usp=sharing&ouid=100657602081476731659&rtpof=true&sd=true",
+        "Semestr": "2",
+        "Przedmiot": "Podstawy Statystyki",
+        "Typ": "ĆWI",
+        "Opis": "Pojęcia i wzory potrzebne do zaliczenia.",
+        "Data": "06.05.2023",
+    },
+    {
         "Nazwa": "Zadania Z Algorytmów",
         "Link": "https://drive.google.com/file/d/1sYqoEfTUQCq1EdnV5NFZblePH6AJl67M/view?usp=sharing",
         "Semestr": "2",
