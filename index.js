@@ -46,6 +46,15 @@ Notes = [
         "Data": "06.05.2023",
     },
     {
+        "Nazwa": "Statystyka Excele",
+        "Link": "https://docs.google.com/spreadsheets/d/1V2ngtlA81Dc1nTbIZXEoqP1rdS5tmVMZ/edit?usp=share_link&ouid=100657602081476731659&rtpof=true&sd=true",
+        "Semestr": "2",
+        "Przedmiot": "Statystyka",
+        "Typ": "ĆWI",
+        "Opis": "Zbiór najważniejszych Excelów z zajęć",
+        "Data": "09.05.2023",
+    },
+    {
         "Nazwa": "Zadania Z Algorytmów",
         "Link": "https://drive.google.com/file/d/1sYqoEfTUQCq1EdnV5NFZblePH6AJl67M/view?usp=sharing",
         "Semestr": "2",
