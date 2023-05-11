@@ -16,7 +16,7 @@ Notes = [
         "Przedmiot": "Algorytmy i Struktury Danych",
         "Typ": "WYK",
         "Opis": "Przepisane notatki odręczne z wykładów do '.docx'.<br>READ ME: Używać tego linku jeśli poprzedni nie działa.",
-        "Data": "DD.MM.YYYY",
+        "Data": "11.05.2023",
     },
     {
         "Nazwa": "Notatka z Elektroniki",
