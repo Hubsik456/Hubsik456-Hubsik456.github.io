@@ -257,5 +257,7 @@ window.addEventListener("load", function()
     {
         Generate_Content_HTML_Version_Grid();
         //Generate_Content_HTML_Version_Table();
+
+        document.getElementById("Filter_Text").disabled = true // JEŚLI Domyslnie ma być widok Siatki TODO:
     }
 )
