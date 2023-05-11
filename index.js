@@ -234,6 +234,24 @@ function Filter_Notes()
     }
 }
 
+function Disable_Search_Menu()
+{
+    /*
+        Disable input for filtering notes. Not finished
+        TODO:
+    */
+    var Current_Mode = document.querySelector("input[name='Content_Mode']:checked").value
+    
+    if (Current_Mode == "Grid")
+    {
+        document.getElementById("Filter_Text").disabled = true
+    }
+    else if (Current_Mode == "Table")
+    {
+        document.getElementById("Filter_Text").disabled = false
+    }
+}
+
 //! On Load
 window.addEventListener("load", function()
     {
