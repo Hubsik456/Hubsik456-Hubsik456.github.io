@@ -10,6 +10,15 @@ Notes = [
         "Data": "16.03.2023",
     },
     {
+        "Nazwa": "Notatka z Algorytmów",
+        "Link": "https://drive.google.com/file/d/19eNd4xV6QiRhcmh-wAF4ircbDa8Jq5B_/view",
+        "Semestr": "2",
+        "Przedmiot": "Algorytmy i Struktury Danych",
+        "Typ": "WYK",
+        "Opis": "Przepisane notatki odręczne z wykładów do '.docx'.<br>READ ME: Używać tego linku jeśli poprzedni nie działa.",
+        "Data": "DD.MM.YYYY",
+    },
+    {
         "Nazwa": "Notatka z Elektroniki",
         "Link": "https://docs.google.com/document/d/1cf-Xoxfr3c9sIkuR8FvzDJsy8BFyQtSX/edit?usp=share_link&ouid=100657602081476731659&rtpof=true&sd=true",
         "Semestr": "2",
