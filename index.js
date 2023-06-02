@@ -99,7 +99,7 @@ Notes = [
         "Opis": "Spis tematów z wykładów z programowania, bardzo ogólnikowe.<br>TODO: Przerobić na .docx",
         "Data": "16.03.2023",
     },
-    {
+    /*{
         "Nazwa": "Elektronika ćw 3 i 4",
         "Link": "https://hubsik456.github.io",
         "Semestr": "2",
@@ -143,6 +143,15 @@ Notes = [
         "Typ": "LAB",
         "Opis": "TODO: WIP<br>Excel do ćwiczeń 9 i 10(✓).<br>Zdane na 3.",
         "Data": "11.05.2023",
+    },*/
+    {
+        "Nazwa": "WIP| Materiały z Lab Algorytmów",
+        "Link": "https://drive.google.com/file/d/1GXHqmUTssiSGmo1HRBOhV4VtNsjgdVhw/view?usp=drive_link",
+        "Semestr": "2",
+        "Przedmiot": "Algorytmy I Struktury Danych",
+        "Typ": "LAB",
+        "Opis": "DEL ME",
+        "Data": "02.06.2023",
     },
     /* Szablon:
     {
