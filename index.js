@@ -47,7 +47,7 @@ Notes = [
     },
     {
         "Nazwa": "Teoria Ze Statystyki v2",
-        "Link": "https://docs.google.com/document/d/1L32b-rZIlhvIkiqviny2vlYLI7Kgmbpk/edit?usp=sharing&ouid=100657602081476731659&rtpof=true&sd=true",
+        "Link": "https://docs.google.com/document/d/1-QEmk1I7nY4DHwh0eL7fzVu-X3RuTAfE/edit?usp=sharing&ouid=100657602081476731659&rtpof=true&sd=true",
         "Semestr": "2",
         "Przedmiot": "Podstawy Statystyki",
         "Typ": "ĆWI",
