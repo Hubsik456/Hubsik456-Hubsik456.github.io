@@ -10,6 +10,15 @@ Notes = [
         "Data": "14.06.2023",
     },
     {
+        "Nazwa": "Zadania z Algorytmów",
+        "Link": "https://drive.google.com/drive/folders/1yPOR0xEMxs6y9iozkqX2fPkWT8j9u3jQ?usp=sharing",
+        "Semestr": "2",
+        "Przedmiot": "Algorytmy i Struktury Danych",
+        "Typ": "WYK",
+        "Opis": "Zdjęcia rozwiązanych zadań z przykładów i zadań domowych.",
+        "Data": "04.07.2023",
+    },
+    {
         "Nazwa": "Notatka z Elektroniki",
         "Link": "https://docs.google.com/document/d/1zu1gSv3h2jwVG57Nb15VNuegcS2MmMrW/edit?usp=sharing&ouid=100657602081476731659&rtpof=true&sd=true",
         "Semestr": "2",
