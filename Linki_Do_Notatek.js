@@ -7,7 +7,7 @@ Notes = [
         "Przedmiot": "PRZEDMIOT",
         "Typ": "WYK/ĆWI/LAB",
         "Opis": "OPIS",
-        "Data": "DD.MM.YYYY",
+        "Data Dodania": "DD.MM.YYYY",
         "Tagi": [["NAZWA", "KLASA_CSS"], ...],
     },
     */
@@ -18,7 +18,7 @@ Notes = [
         "Przedmiot": "Algorytmy i Struktury Danych",
         "Typ": "WYK",
         "Opis": "Przepisane notatki odręczne z wykładów do '.docx'.",
-        "Data": "14.06.2023",
+        "Data Dodania": "14.06.2023",
         "Tagi": [[".docx", "Tag_Blue"], ["Długie", "Tag_Red"]],
     },
     {
@@ -28,7 +28,7 @@ Notes = [
         "Przedmiot": "Algorytmy i Struktury Danych",
         "Typ": "WYK",
         "Opis": "Zdjęcia rozwiązanych zadań z przykładów i zadań domowych.",
-        "Data": "04.07.2023",
+        "Data Dodania": "04.07.2023",
         "Tagi": [[".jpg", "Tag_LightBlue"]]
     },
     {
@@ -38,7 +38,7 @@ Notes = [
         "Przedmiot": "Podstawy Elektrotechniki i Elektroniki",
         "Typ": "WYK",
         "Opis": "Przerobione materiały z elektroniki.",
-        "Data": "14.06.2023",
+        "Data Dodania": "14.06.2023",
         "Tagi": [[".docx", "Tag_Blue"], ["Długie", "Tag_Red"]]
     },
     {
@@ -48,7 +48,7 @@ Notes = [
         "Przedmiot": "Podstawy Statystyki",
         "Typ": "ĆWI",
         "Opis": "Przerobione przykłady z zajęć.",
-        "Data": "14.06.2023",
+        "Data Dodania": "14.06.2023",
         "Tagi": [["Nie Dokończone", "Tag_Black"], [".xlsx", "Tag_Green"]],
     },
     {
@@ -58,7 +58,7 @@ Notes = [
         "Przedmiot": "Statystyka",
         "Typ": "ĆWI",
         "Opis": "Zbiór najważniejszych Excelów z zajęć.",
-        "Data": "14.06.2023",
+        "Data Dodania": "14.06.2023",
         "Tagi": [["Z Lekcji", "Tag_Purple"], [".xlsx", "Tag_Green"]],
     },
     {
@@ -68,7 +68,7 @@ Notes = [
         "Przedmiot": "Podstawy Statystyki",
         "Typ": "ĆWI",
         "Opis": "Zbiór tematów z teorii, potrzebnych do zadań z Excela.",
-        "Data": "14.06.2023",
+        "Data Dodania": "14.06.2023",
         "Tagi": [["Nie Dokończone", "Tag_Black"], [".docx", "Tag_Blue"]],
     },
     {
@@ -78,7 +78,7 @@ Notes = [
         "Przedmiot": "Podstawy Statystyki",
         "Typ": "ĆWI",
         "Opis": "Poprawiona wersja. Pojęcia i wzory potrzebne do zaliczenia.",
-        "Data": "14.06.2023",
+        "Data Dodania": "14.06.2023",
         "Tagi": [[".docx", "Tag_Blue"],],
     },
     {
@@ -88,7 +88,7 @@ Notes = [
         "Przedmiot": "Algorytmy i Struktury Danych",
         "Typ": "LAB",
         "Opis": "Rozwiązania wszystkich zadań z labów z algorytmów.",
-        "Data": "14.06.2023",
+        "Data Dodania": "14.06.2023",
         "Tagi": [["Nie Dokończone", "Tag_Black"], [".ipynb", "Tag_Gray"]],
     },
     {
@@ -98,7 +98,7 @@ Notes = [
         "Przedmiot": "Matematyka",
         "Typ": "WYK",
         "Opis": "Notatka z teorii z wykładów z matematyki.",
-        "Data": "14.06.2023",
+        "Data Dodania": "14.06.2023",
         "Tagi": [["Nie Dokończone", "Tag_Black"], [".docx", "Tag_Blue"]],
     },
     {
@@ -108,7 +108,7 @@ Notes = [
         "Przedmiot": "CCNA",
         "Typ": "LAB",
         "Opis": "Spis poleceń używanych na labach i zaliczeniu z CCNA.",
-        "Data": "14.06.2023",
+        "Data Dodania": "14.06.2023",
         "Tagi": [[".docx", "Tag_Blue"],],
     },
     {
@@ -118,7 +118,7 @@ Notes = [
         "Przedmiot": "Wstęp Do Programowania",
         "Typ": "LAB",
         "Opis": "Spis tematów z wykładów z programowania, bardzo ogólnikowe.",
-        "Data": "14.06.2023",
+        "Data Dodania": "14.06.2023",
         "Tagi": [[".docx", "Tag_Blue"],],
     },
 ]

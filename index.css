@@ -28,6 +28,7 @@ input[type="radio"]:checked + label {
 /* All changes to Tags/Badges */
 .badge {
     margin: 1px;
+    cursor: pointer;
 }
 .Tag_Blue { /* .docx */
     background-color: blue;
@@ -45,19 +46,19 @@ input[type="radio"]:checked + label {
     background-color: gray;
     color: white;
 }
-.Tag_Red { /* Długie */
+.Tag_Red { /* Long */
     background-color: red;
     color: white;
 }
-.Tag_Black { /* Nie Dokończone/Porzucone */
+.Tag_Black { /* Not Finished/Abandoned */
     background-color: black;
     color: white;
 }
-.Tag_Purple { /* Materiały z lekcji */
+.Tag_Purple { /* Materials from classes */
     background-color: purple;
     color: white;
 }
-.Tag_Pink { /* Zadania domowe */
+.Tag_Pink { /* Homework */
     background-color: pink;
     color: white;
 }
@@ -65,6 +66,6 @@ input[type="radio"]:checked + label {
     background-color: yellow;
     color: white;
 }
-.KLASA_CSS { /* Jeśli nie ustawiono nazwy klasy */
+.KLASA_CSS { /* If no class was selected in JS code for making tags */
     display: none;
 }

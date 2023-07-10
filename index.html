@@ -24,7 +24,7 @@
 
     <body>
         <div class="container-fluid p-4 bg-primary text-white text-center">
-            <h1>Stronka v4.1</h1>
+            <h1>Stronka v4.2</h1>
             <p id="Random_Message">...</p>
         </div>
 
@@ -36,11 +36,11 @@
 
                 <div class="input-group">
                     <div class="form-floating">
-                        <input id="Filter_Text" type="text" class="form-control" placeholder="..." onkeyup="Filter_Notes()">
+                        <input id="Filter_Text" type="text" class="form-control" placeholder="..." onkeyup="Filter_Notes_v2()">
                         <label for="Filter_Text">Wyszukaj</label>
                     </div>
 
-                    <select id="Filter_Select" class="form-select" name="Filter_Select" onchange="Filter_Notes()">
+                    <select id="Filter_Select" class="form-select" name="Filter_Select" onchange="Filter_Notes_v2()">
                         <option>Nazwa</option>
                         <option>Przedmiot</option>
                         <option>Semestr</option>
@@ -51,15 +51,15 @@
                     </select>
                 </div>
 
-                <p id="Filter_TODO"><b class="mark">TODO:</b> Filtrowanie działa na razie tylko w widoku tabeli.</p>
+                <!-- <p id="Filter_TODO"><b class="mark">TODO:</b> Filtrowanie działa na razie tylko w widoku tabeli.</p> -->
                 
                 <hr>
 
                 <p><b>Wyświetl Jako:</b></p>
-                <input type="radio" name="Content_Mode" id="CM_Grid" value="Grid" onchange="Disable_Search_Menu(); Generate_Content_HTML_Version_Grid()" checked>
+                <input type="radio" name="Content_Mode" id="CM_Grid" value="Grid" onchange="Save_Display_Mode(); Generate_Content_HTML_Version_Grid(Notes_Edited)" checked>
                 <label for="CM_Grid">Siatka</label> <br>
 
-                <input type="radio" name="Content_Mode" id="CM_Table" value="Table" onchange="Disable_Search_Menu(); Generate_Content_HTML_Version_Table()">
+                <input type="radio" name="Content_Mode" id="CM_Table" value="Table" onchange="Save_Display_Mode(); Generate_Content_HTML_Version_Table(Notes_Edited)">
                 <label for="CM_Table">Tabela</label>
                 
                 <hr>

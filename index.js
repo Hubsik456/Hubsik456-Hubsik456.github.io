@@ -1,5 +1,8 @@
+//! Variables
+var Notes_Edited = Notes
+
 //! Functions
-function Generate_Content_HTML_Version_Grid()
+function Generate_Content_HTML_Version_Grid(Array_With_Notes = Notes)
 {
     /*
         Generate HTML code to display notes in form of a grid.
@@ -7,16 +10,16 @@ function Generate_Content_HTML_Version_Grid()
 
     Temp_HTML = ""
 
-    for (var x = 0; x < Notes.length; x++)
+    for (var x = 0; x < Array_With_Notes.length; x++)
     {
         Temp_HTML += "<div class='col-sm-4 mt-4 p-4 Note'>"
         Temp_HTML += "<p>"
-        Temp_HTML += "<b class='border-bottom border-primary'>" + Notes[x]["Nazwa"] + "</b> <br>"
-        Temp_HTML += "<small>" + Notes[x]["Przedmiot"] + "</small> <br>"
-        Temp_HTML += "<i title='Semestr:  " + Notes[x]["Semestr"] + "\nTyp: " + Notes[x]["Typ"] + "'>" + Notes[x]["Semestr"] + " " + Notes[x]["Typ"] + " </i> " + Notes[x]["Data"] + "<br>"
-        Temp_HTML += "<div class='d-grid'> <a href='" + Notes[x]["Link"] + "'> <button class='btn btn-primary btn-block'>" + "Link" + "</button> </a> </div> <br>"
+        Temp_HTML += "<b class='border-bottom border-primary'>" + Array_With_Notes[x]["Nazwa"] + "</b> <br>"
+        Temp_HTML += "<small>" + Array_With_Notes[x]["Przedmiot"] + "</small> <br>"
+        Temp_HTML += "<i title='Semestr:  " + Array_With_Notes[x]["Semestr"] + "\nTyp: " + Array_With_Notes[x]["Typ"] + "'>" + Array_With_Notes[x]["Semestr"] + " " + Array_With_Notes[x]["Typ"] + " </i> " + Array_With_Notes[x]["Data Dodania"] + "<br>"
+        Temp_HTML += "<div class='d-grid'> <a href='" + Array_With_Notes[x]["Link"] + "'> <button class='btn btn-primary btn-block'>" + "Link" + "</button> </a> </div> <br>"
         Temp_HTML += "<hr>" + "<b>Tagi:</b> " + Get_Tags(x) + "<br>"
-        Temp_HTML += "<hr>" + Notes[x]["Opis"] + "<br>"
+        Temp_HTML += "<hr>" + Array_With_Notes[x]["Opis"] + "<br>"
         Temp_HTML += "</p>"
         Temp_HTML += "<div class='Note_Counter text-primary'> <p>#" + (x+1) + "</p> </div>"
         Temp_HTML += "</div>"
@@ -26,7 +29,7 @@ function Generate_Content_HTML_Version_Grid()
     document.getElementById("Content").innerHTML = Temp_HTML
 }
 
-function Generate_Content_HTML_Version_Table()
+function Generate_Content_HTML_Version_Table(Array_With_Notes = Notes)
 {
     /*
         Generate HTML code to display notes in form of a table.
@@ -34,7 +37,7 @@ function Generate_Content_HTML_Version_Table()
 
     Temp_HTML = "<div class='overflow-auto'><table class='table table-hover table-striped border border-primary' id='Notes_Table'>"
 
-    for (var x = 0; x < Notes.length; x++)
+    for (var x = 0; x < Array_With_Notes.length; x++)
     {
         if (x == 0) // Table Header
         {
@@ -54,14 +57,14 @@ function Generate_Content_HTML_Version_Table()
             Temp_HTML += "<tr>"
         }
         
-        Temp_HTML += "<td>"+Notes[x]["Nazwa"]+"</td>"
-        Temp_HTML += "<td>"+Notes[x]["Przedmiot"]+"</td>"
-        Temp_HTML += "<td>"+Notes[x]["Semestr"]+"</td>"
-        Temp_HTML += "<td>"+Notes[x]["Typ"]+"</td>"
-        Temp_HTML += "<td>"+Notes[x]["Data"]+"</td>"
+        Temp_HTML += "<td>"+Array_With_Notes[x]["Nazwa"]+"</td>"
+        Temp_HTML += "<td>"+Array_With_Notes[x]["Przedmiot"]+"</td>"
+        Temp_HTML += "<td>"+Array_With_Notes[x]["Semestr"]+"</td>"
+        Temp_HTML += "<td>"+Array_With_Notes[x]["Typ"]+"</td>"
+        Temp_HTML += "<td>"+Array_With_Notes[x]["Data Dodania"]+"</td>"
         Temp_HTML += "<td>"+Get_Tags(x)+"</td>"
-        Temp_HTML += "<td>"+Notes[x]["Opis"]+"</td>"
-        Temp_HTML += "<td> <a href='" + Notes[x]["Link"] + "'> <button class='btn btn-primary btn-block'>  "+ "Link" + "</button> </a> </td>"
+        Temp_HTML += "<td>"+Array_With_Notes[x]["Opis"]+"</td>"
+        Temp_HTML += "<td> <a href='" + Array_With_Notes[x]["Link"] + "'> <button class='btn btn-primary btn-block'>  "+ "Link" + "</button> </a> </td>"
 
         Temp_HTML += "</tr>"
     }
@@ -73,107 +76,77 @@ function Generate_Content_HTML_Version_Table()
 function Get_Tags(Index)
 {
     /*
-        Generate HTML code to display correctly formatted tags
+        Generate HTML code to display correctly formatted tags.
+        This function is used mainly by:
+            - Generate_Content_HTML_Version_Grid
+            - Generate_Content_HTML_Version_Table
     */
 
-    if (!("Tagi" in Notes[Index]) || (Notes[Index]["Tagi"].length == 0)) // If there are not any tags
+    if (!("Tagi" in Notes_Edited[Index]) || (Notes_Edited[Index]["Tagi"].length == 0)) // If there are not any tags
     {
         return "Brak"
     }
 
     var Temp_HTML = ""
 
-    for (var x = 0; x < Notes[Index]["Tagi"].length; x++)
+    for (var x = 0; x < Notes_Edited[Index]["Tagi"].length; x++)
     {
-        Temp_HTML += "<div class='badge " + Notes[Index]["Tagi"][x][1] + "'> " + Notes[Index]["Tagi"][x][0] + "</div>"
+        Temp_HTML += "<div onclick='Filter_By_Tag(\"" + Notes_Edited[Index]["Tagi"][x][0] + "\")' class='badge " + Notes_Edited[Index]["Tagi"][x][1] + "'> " + Notes_Edited[Index]["Tagi"][x][0] + "</div>"
     }
 
     return Temp_HTML
 }
 
-function Filter_Notes()
+function Filter_Notes_v2()
 {
-    /* 
-        Filter content of Grid/Table depending on user input.
+    /*
+        Filter notes by user input (text and select).
     */
 
-    var Dane = {
-        "Nazwa": 0,
-        "Przedmiot": 1,
-        "Semestr": 2,
-        "Typ": 3,
-        "Data Dodania": 4,
-        "Tagi": 5,
-        "Opis": 6,
-    }
-    var Temp_Grid = document.getElementsByClassName("Note")[0]
-    var Temp_Table = document.getElementById("Notes_Table")
+    // Variables
+    var Filter_Text = document.getElementById("Filter_Text").value
+    var Filter_Category = document.getElementById("Filter_Select").value
+    var Temp_Array = []
 
-    // Grid View TODO:
-    if (Temp_Grid !== undefined)
+    // If there is no user input
+    if (Filter_Text == "")
     {
-        //var Blocks = document.getElementsByClassName("Note")
-
-        // for (var x = 0; x < Blocks.length; x++)
-        // {
-        // }
+        Notes_Edited = Notes
     }
-
-    // Table View
-    else if (Temp_Table !== null)
+    // If there is user input
+    else
     {
-        var Input = document.getElementById("Filter_Text").value.toLocaleLowerCase()
-        var Filtr = document.getElementById("Filter_Select").value
-        var Table = document.getElementById("Notes_Table")
-        var Table_tr = Table.getElementsByTagName("tr")
-
-        for (var x = 0; x < Table_tr.length; x++)
+        for (var x = 0; x < Notes.length; x++)
         {
-            var Table_td = Table_tr[x].getElementsByTagName("td")[Dane[Filtr]]
-            if (Table_td)
+            if (Filter_Category != "Tagi") // If category selected is not "Tags"
             {
-                var Temp  = Table_td.textContent || Table_td.innerText
-                
-                if (Temp.toLocaleLowerCase().indexOf(Input) > -1)
+                if (Notes[x][Filter_Category].toLowerCase().includes(Filter_Text.toLowerCase()))
                 {
-                    Table_tr[x].style.display = ""
+                    Temp_Array.push(Notes[x])
                 }
-                else
+            }
+            else // If category selected is "Tags"
+            {
+                for (var y = 0; y < Notes[x][Filter_Category].length; y++)
                 {
-                    Table_tr[x].style.display = "none"
+                    if (Notes[x][Filter_Category][y][0].toLowerCase().includes(Filter_Text.toLowerCase()))
+                    {
+                        Temp_Array.push(Notes[x])
+                    }
                 }
             }
         }
-    }
-}
 
-function Disable_Search_Menu()
-{
-    /*
-        Disable input for filtering notes
-        TODO: Not finished
-    */
+        Notes_Edited = Temp_Array
+    }
 
-    var Current_Mode = document.querySelector("input[name='Content_Mode']:checked").value
-    
-    if (Current_Mode == "Grid")
-    {
-        document.getElementById("Filter_Text").disabled = true
-        document.getElementById("Filter_Select").disabled = true
-        document.getElementById("Filter_TODO").style.display = "initial"
-    }
-    else if (Current_Mode == "Table")
-    {
-        document.getElementById("Filter_Text").disabled = false
-        document.getElementById("Filter_Select").disabled = false
-        document.getElementById("Filter_TODO").style.display = "none"
-    }
+    Reload_All_Diplayed_Notes()
 }
 
 function Random_Message_Banner()
 {
     /*
-        Set text on banner to randomly selected text from the Array
+        Set text on banner to randomly selected text from the Array.
         
         TODO: Add more texts
     */
@@ -186,19 +159,67 @@ function Random_Message_Banner()
     ]
 
     document.getElementById("Random_Message").innerHTML = Texts[Math.floor(Math.random() * Texts.length)]
+}
 
+function Reload_All_Diplayed_Notes()
+{
+    /*
+        Force reloading all notes in selected View Mode.
+    */
+
+    var Current_Mode = document.querySelector("input[name='Content_Mode']:checked").value
+
+    if (Current_Mode == "Grid") // Grid View
+    {
+        Generate_Content_HTML_Version_Grid(Notes_Edited)
+    }
+    else if (Current_Mode == "Table") // Table View
+    {
+        Generate_Content_HTML_Version_Table(Notes_Edited)
+    }
+}
+
+function Filter_By_Tag(Tag)
+{
+    /*
+        After clicking on specific tag, show only notes with that tag.
+    */
+
+    document.getElementById("Filter_Text").value = Tag
+    document.getElementById("Filter_Select").value = "Tagi"
+    Filter_Notes_v2()
+}
+
+function Save_Display_Mode()
+{
+    /*
+        Save current View Mode to local storage, so it can be remembered when opening website.
+    */
+
+    localStorage.View_Mode = document.querySelector("input[name='Content_Mode']:checked").value
+}
+
+function Load_Display_Mode()
+{
+    /*
+        Load preferred View Mode, if there is none, Grid View will be used.
+    */
+
+    if (localStorage.View_Mode)
+    {
+        document.querySelector("input[value='" + localStorage.View_Mode+ "']").checked = true
+        Reload_All_Diplayed_Notes()
+    }
+    else
+    {
+        Generate_Content_HTML_Version_Grid(Notes_Edited)
+    }
 }
 
 //! On Load
 window.addEventListener("load", function()
     {
         Random_Message_Banner();
-
-        Generate_Content_HTML_Version_Grid()
-        //Generate_Content_HTML_Version_Table()
-
-        document.getElementById("Filter_Text").disabled = true // ONLY IF Grid View should be default TODO:
-        document.getElementById("Filter_Select").disabled = true // ONLY IF Grid View should be default TODO:
-        document.getElementById("Filter_TODO").style.display = "initial" // ONLY IF Grid View should be default TODO:
+        Load_Display_Mode()
     }
 )
