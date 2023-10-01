@@ -1,0 +1,47 @@
+//! Info
+/*
+    Modifications to Boostrap 5.3.0
+*/
+
+//! Imports
+@import "../node_modules/bootstrap/scss/_functions.scss";
+@import "../node_modules/bootstrap/scss/_variables.scss";
+
+
+//! Changes to variables
+    //? Primary
+$primary: #2dbc32; // #2dbc32
+$primary-light: tint-color($primary, 70%); // #c0ebc2
+
+    //? Secondary
+$secondary: #f3f3f3; // #f3f3f3
+$secondary-dark: darken($secondary, 5%);
+$secondary-darker: darken($secondary, 50%);
+
+    //? Misc Colors
+$blue-light: #46ceea;
+$lime: #4dff4d;
+
+    //? Accordions
+$accordion-button-color: $primary;
+$accordion-button-bg: $secondary;
+
+$accordion-button-active-color: $primary;
+$accordion-button-active-bg: tint-color($primary, 90%);
+
+    //? Tables
+$table-primary: tint-color($primary, 90%);
+
+//! Merging changes
+$theme-colors: map-merge($theme-colors, (
+    "primary": $primary,
+    "secondary": $secondary,
+    "secondary-dark": $secondary-dark,
+    "secondary-darker": $secondary-darker,
+    "primary-light": $primary-light,
+    "blue-light": $blue-light,
+    "lime": $lime,
+));
+
+//! Save changes
+@import "../node_modules/bootstrap/scss/bootstrap";

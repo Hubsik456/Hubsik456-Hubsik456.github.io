@@ -1,71 +1,18 @@
-/* All chnages related to Notes in Grid View */
-.Note {
-    background-color: #f3f3f3;
+* {
+    box-sizing: border-box;
+}
+body {
     position: relative;
-    margin: 0px;
 }
-.Note:hover {
-    background-color: #dedede;
-    transition: all 0.35s;
+:target {
+    color: var(--bs-primary);
 }
-.Note .d-grid a button {
-    width: 100%;
-}
-.Note .Note_Counter {
-    color: #8b8484;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+/* Custom style to stick list group on top */
+.list-group {
+    position: sticky;
+    top: 15px;
 }
 
-/* Other Changes */
-input[type="radio"]:checked + label {
-    color: #0d6efd;
-    background-color: #f3f3f3;
-    border-radius: 0 10px 10px 0;
-}
-
-/* All changes to Tags/Badges */
-.badge {
-    margin: 1px;
-    cursor: pointer;
-}
-.Tag_Blue { /* .docx */
-    background-color: blue;
-    color: white;
-}
-.Tag_LightBlue { /* .jpg */
-    background-color: rgb(89, 185, 217);
-    color: black;
-}
-.Tag_Green { /* .xlsx */
-    background-color: green;
-    color: white;
-}
-.Tag_Gray { /*  __lang__ code file */
-    background-color: gray;
-    color: white;
-}
-.Tag_Red { /* Long */
-    background-color: red;
-    color: white;
-}
-.Tag_Black { /* Not Finished/Abandoned */
-    background-color: black;
-    color: white;
-}
-.Tag_Purple { /* Materials from classes */
-    background-color: purple;
-    color: white;
-}
-.Tag_Pink { /* Homework */
-    background-color: pink;
-    color: white;
-}
-.Tag_Yellow { /* Nowe */
-    background-color: yellow;
-    color: white;
-}
-.KLASA_CSS { /* If no class was selected in JS code for making tags */
-    display: none;
+.nav-item .active {
+    color: red;
 }

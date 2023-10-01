@@ -1,0 +1,156 @@
+/* All chnages related to Notes in Grid View */
+.Note {
+    background-color: var(--bs-secondary);
+    position: relative;
+    padding: 0px;
+}
+.Note:hover {
+    background-color: var(--bs-secondary-dark);
+    transition: all 0.35s;
+}
+.Note .d-grid a button {
+    width: 100%;
+}
+.Note .Note_Counter {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Other changes */
+input[type="radio"]:checked + label {
+    color: var(--bs-primary);
+    background-color: var(--bs-secondary);
+    border-radius: 0 10px 10px 0;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+/* All changes to Tags/Badges */
+.badge {
+    margin: 1px;
+    cursor: pointer;
+}
+.Tag_Blue { /* .docx */
+    background-color: var(--bs-blue);
+    color: var(--bs-white);
+}
+.Tag_Green { /* .xlsx */
+    background-color: var(--bs-green);
+    color: var(--bs-white);
+}
+.Tag_Teal { /* .jpg */
+    background-color: var(--bs-teal);
+    color: var(--bs-black);
+}
+.Tag_Gray { /*  __lang__ code file */
+    background-color: var(--bs-gray);
+    color: var(--bs-white);
+}
+.Tag_Red { /* Long */
+    background-color: var(--bs-red);
+    color: var(--bs-white);
+}
+.Tag_Black { /* Not Finished/Abandoned */
+    background-color: var(--bs-black);
+    color: var(--bs-white);
+}
+.Tag_Purple { /* Materials from classes */
+    background-color: var(--bs-indigo);
+    color: var(--bs-white);
+}
+.Tag_Pink { /* Homework */
+    background-color: var(--bs-pink);
+    color: var(--bs-white);
+}
+.Tag_Yellow { /* New */
+    background-color: var(--bs-yellow);
+    color: var(--bs-black);
+}
+.Tag_Orange { /* Bad Formatting */
+    background-color: var(--bs-orange);
+    color: var(--bs-black);
+}
+.Tag_Lime {
+    background-color: var(--bs-lime);
+    color: var(--bs-black)
+}
+
+.KLASA_CSS { /* If no class was selected in JS code for making tags */
+    display: none;
+}
+
+/* Custom - Shadow Effects */
+.Shadow_Blur {
+    text-shadow:
+        1px 1px var(--bs-secondary-dark),
+        10px 10px 20px var(--bs-primary),
+        -10px 10px 20px var(--bs-primary),
+        10px -10px 20px var(--bs-primary),
+        -10px -10px 20px var(--bs-primary);
+}
+
+/* Custom - "hr" tag with text */
+.Hr_Text {
+    color: var(--bs-primary);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.Hr_Text::before, .Hr_Text::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--bs-secondary-darker);
+}
+
+/* All changes to Accordions */
+.accordion-button:focus {
+    box-shadow:  0 0 0 0.2rem var(--bs-primary-light);
+}
+
+/* All changes to Forms */
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow:  0 0 0 0.2rem var(--bs-primary-light);
+}
+
+.Delete_Input:hover {
+    background-color: var(--bs-red);
+}
+
+/* Scroll Progress */
+#Scroll_Progress_Header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+}
+#Scroll_Progress_Container {
+    width: 100%;
+    height: 5px;
+    background-color: var(--bs-primary-light);
+}
+#Scroll_Progress_Bar {
+    width: 0%;
+    height: 5px;
+    background-color: var(--bs-primary);
+}
+
+/* Button To Open Settings */
+.Settings_Button {
+    float: right;
+}
+
+/* Disables advanced filter menu if there are no saved settings in local storage*/
+#Advanced_Filter {
+    display: none;
+}
+
+/* Scroll To Top */
+.Scroll_To_Top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 5px;
+    z-index: 250;
+}

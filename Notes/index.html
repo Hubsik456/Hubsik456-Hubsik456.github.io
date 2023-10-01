@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <title>Notatki By Hubsik</title>
+        <meta charset="utf-8">
+        <link rel="icon" href="../Images/Favicon.ico">
+
+        <!-- Meta -->
+        <meta name="description" content="Notatki ze studiów na kierunku 'Informatyka-Programowanie'">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" type="#2dbc32">
+        <meta name="author" content="Hubert Michna">
+        <meta name="keywords" content="Notatki, Notes, Informatyka, Programowanie, Studia">
+        
+        <!-- JS -->
+        <script src="../Bootstrap/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS -->
+        <script src="Linki_Do_Notatek.js"></script>
+        <script src="index.js"></script>
+
+        <!-- CSS -->
+        <link href="../Bootstrap/Modified_bootstrap.css" rel="stylesheet"> <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
+        <link href="index.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Banner -->
+        <div class="container-fluid p-4 bg-primary text-white text-center">
+            <h1>Stronka v4.3</h1>
+            <p id="Random_Message">...</p>
+        </div>
+
+        <!-- Scroll Progress Bar -->
+        <div id="Scroll_Progress_Header">
+            <div id="Scroll_Progress_Container">
+                <div id="Scroll_Progress_Bar"></div>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div class="container">
+            <div class="row">
+
+                <!-- Side Menu -->
+                <div class="col-sm-3 p-4">
+                    <div class="sticky-top">
+                        <!-- Menu Header -->
+                        <h2 class="">
+                            Menu:
+
+                            <a href="#Settings" role="button" class="btn" data-bs-toggle="modal" title="Ustawienia" class="Settings_Button" style="float: right;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="Hover bi bi-gear-fill text-dark" viewBox="0 0 16 16"> <!-- https://icons.getbootstrap.com/icons/gear-fill/ -->
+                                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                                </svg>
+                            </a>
+                        </h2>
+
+                        <br class="d-none d-sm-block d-md-none">
+
+                        <hr>
+
+                        <label for="Filter_Text"><b>Wyszukiwanie: </b></label>
+
+                        <!-- Search (Simple) -->
+                        <div id="Simplified_Filter">
+                            <div class="input-group">
+                                <div class="form-floating">
+                                    <input id="Filter_Text" type="text" class="form-control" placeholder="..." onkeyup="Filter_Notes_v2(); Save_Local_Storage()" maxlength="50">
+                                    <!-- <label for="Filter_Text">Wyszukaj</button></label> --> <!-- TODO: Co to za button??? ;Overflow bug after switching form Bootstrap 5.2.3 to 5.3.0 -->
+                                    <label for="Filter_Text">Wyszukaj</label> <!-- TODO: Co to za button???, po usunięciu nic się nie zmieniło -->
+                                </div>
+
+                                <select id="Filter_Select" class="form-select form-control" name="Filter_Select" onchange="Filter_Notes_v2()" title="Wybierz Dane">
+                                    <option>Nazwa</option>
+                                    <option>Przedmiot</option>
+                                    <option>Semestr</option>
+                                    <option>Typ</option>
+                                    <option>Data Dodania</option>
+                                    <option>Tagi</option>
+                                    <option>Opis</option>
+                                    <option>Autor</option>
+                                </select>
+
+                                <button class="btn btn-secondary Delete_Input" onclick="Delete_Input('Filter_Text')">x</button>
+                            </div>
+                        </div>
+
+                        <!-- Search (Advanced) -->
+                        <div id="Advanced_Filter">
+                            <br>
+
+                            <!-- <label for="Advanced_Filter_Name" class="form-label">Nazwa: </label> -->
+                            <div class="input-group">
+                                <div class="form-floating">
+                                    <input id="Advanced_Filter_Name" type="text" class="form-control" placeholder="..." onkeyup="Advanced_Filter_Notes(); Save_Filter_Input()">
+                                    <label for="Advanced_Filter_Name">Nazwa</label>
+                                </div>
+                                
+                                <button class="btn btn-secondary Delete_Input" onclick="Delete_Input('Advanced_Filter_Name')">x</button>
+                            </div>
+
+                            <!-- <label for="Advanced_Filter_Subject" class="form-label">Przedmiot: </label> --> <br>
+                            <div class="input-group">
+                                <div class="form-floating">
+                                    <input id="Advanced_Filter_Subject" type="text" class="ui-widget autocomplete form-control" placeholder="..." onkeyup="Advanced_Filter_Notes(); Save_Filter_Input()">
+                                    <label for="Advanced_Filter_Subject">Przedmiot</label>
+                                </div>
+                                
+                                <button class="btn btn-secondary Delete_Input" onclick="Delete_Input('Advanced_Filter_Subject')">x</button>
+                            </div>
+
+                            <!-- <label for="Advanced_Filter_Semester" class="form-label">Semestr: </label> --> <br>
+                            <div class="input-group">
+                                <div class="form-floating">
+                                    <input id="Advanced_Filter_Semester" type="text" class="form-control" placeholder="..." onkeyup="Advanced_Filter_Notes(); Save_Filter_Input()">
+                                    <label for="Advanced_Filter_Semester">Semestr</label>
+                                </div>
+                                
+                                <button class="btn btn-secondary Delete_Input" onclick="Delete_Input('Advanced_Filter_Semester')">x</button>
+                            </div>
+
+                            <!-- <label for="Advanced_Filter_Type" class="form-label">Typ: </label> --> <br>
+                            <div class="input-group">
+                                <div class="form-floating">
+                                    <input id="Advanced_Filter_Type" type="text" class="form-control" placeholder="..." onkeyup="Advanced_Filter_Notes(); Save_Filter_Input()">
+                                    <label for="Advanced_Filter_Type">Typ Zajęć</label>
+                                </div>
+                                
+                                <button class="btn btn-secondary Delete_Input" onclick="Delete_Input('Advanced_Filter_Type')">x</button>
+                            </div>
+
+                            <!-- <label for="Advanced_Filter_Date" class="form-label">Data: </label> --> <br>
+                            <div class="input-group">
+                                <div class="form-floating">
+                                    <input id="Advanced_Filter_Date" type="text" class="form-control" placeholder="..." onkeyup="Advanced_Filter_Notes(); Save_Filter_Input()">
+                                    <label for="Advanced_Filter_Date">Data Dodania</label>
+                                </div>
+                                <button class="btn btn-secondary Delete_Input" onclick="Delete_Input('Advanced_Filter_Date')">x</button>
+                            </div>
+
+                            <!-- <label for="Advanced_Filter_Tags" class="form-label">Tagi: </label> --> <br>
+                            <div class="input-group">
+                                <div class="form-floating">
+                                    <input id="Advanced_Filter_Tags" type="text" class="form-control" placeholder="..." onkeyup="Advanced_Filter_Notes(); Save_Filter_Input()">
+                                    <label for="Advanced_Filter_Tags">Tagi</label>
+                                </div>
+                                
+                                <button class="btn btn-secondary Delete_Input" onclick="Delete_Input('Advanced_Filter_Tags')">x</button>
+                            </div>
+
+                            <!-- <label for="Advanced_Filter_Description" class="form-label">Opis: </label> --> <br>
+                            <div class="input-group">
+                                <div class="form-floating">
+                                    <input id="Advanced_Filter_Description" type="text" class="form-control" placeholder="..." onkeyup="Advanced_Filter_Notes(); Save_Filter_Input()">
+                                    <label for="Advanced_Filter_Description">Opis</label>
+                                </div>
+                                <button class="btn btn-secondary Delete_Input" onclick="Delete_Input('Advanced_Filter_Description')">x</button>
+                            </div>
+
+                            <!-- <label for="Advanced_Filter_Author" class="form-label">Autor: </label> --> <br>
+                            <div class="input-group">
+                                <div class="form-floating">
+                                    <input id="Advanced_Filter_Author" type="text" class="form-control" placeholder="..." onkeyup="Advanced_Filter_Notes(); Save_Filter_Input()">
+                                    <label for="Advanced_Filter_Author">Autor</label>
+                                </div>
+                                <button class="btn btn-secondary Delete_Input" onclick="Delete_Input('Advanced_Filter_Author')">x</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Block -->
+                <div class="col-sm-9 p-4">
+                    <noscript><div class='alert alert-danger'><b>Ta strona wymaga JS do poprawnego działania.</b></div></noscript>
+                    
+                    <h2>Content:</h2>
+                    <p id="Note_Counter">Znaleziono ___ notatek.</p>
+                    
+                    <div class="row" id="Content">
+                        <!-- TREŚĆ GENEROWANA PRZEZ JS -->
+                    </div>
+
+                    <div class="Hr_Text">
+                        <h5>&nbsp;FAQ:&nbsp;</h5>
+                    </div>
+
+                    <!-- Accordions -->
+                    <div class="accordion">
+                        <!-- Element 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-heading_1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse_1" aria-expanded="false" aria-controls="panelsStayOpen-collapse_1">
+                                    Obrazki/Wzory nie działają
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapse_1" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading_1">
+                                <div class="accordion-body">
+                                    Jeśli dana notatka jest za długa to wzory i obrazki mogą nie być wyświetlane, aby to obejść musisz pobrać te notatkę i otworzyć ją Wordem.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Element 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-heading_2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse_2" aria-expanded="false" aria-controls="panelsStayOpen-collapse_2">
+                                    Jak pobrać notatkę
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapse_2" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading_2">
+                                <div class="accordion-body">
+                                    Po kliknięciu na link, na stonie z Google Docs, górny lewy róg, Plik/Pobierz/___<br>
+                                    Wybierz format z MS Office.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Element 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-heading_4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse_4" aria-expanded="false" aria-controls="panelsStayOpen-collapse_4">
+                                    Tagi
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapse_4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading_4">
+                                <div class="accordion-body">
+                                    Jeśli klikniesz na dany tag to pokazane zostaną tylko notatki z tym tagiem. Działa też na tagach z poniższej tabeli.<br>
+                                    Opisy wszystkich tagów:
+                                    
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr> <th>Tag:</th> <th>Opis:</th> </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td> <div onclick="Filter_By_Tag('.docx')" class="badge Tag_Blue">.docx</div> </td>
+                                                <td>Pliki w formacie ".docx", zawierające customowe formatowanie (patrz nie działa w Google Docs).</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <div onclick="Filter_By_Tag('.xlsx')" class="badge Tag_Green">.xlsx</div> </td>
+                                                <td>Pliki w formacie ".xlsx".</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <div onclick="Filter_By_Tag('.ipynb')" class="badge Tag_Gray">.ipynb</div> </td>
+                                                <td>Pliki w formacie .ipynb, zawierające kod w języku Python.</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <div onclick="Filter_By_Tag('.jpg')" class="badge Tag_Teal">.jpg</div> </td>
+                                                <td>Pliki w formacie ".jpg", zdjęcia lub skany papierowych notatek.</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <div onclick="Filter_By_Tag('Długie')" class="badge Tag_Red">Długie</div> </td>
+                                                <td>Bardzo długie notatki, zwykle kilkadziesiąc stron A4, z minimalnym marginesem. Mają zwykle rozbudowany spis treści.</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <div onclick="Filter_By_Tag('WIP')" class="badge Tag_Black">WIP</div> </td>
+                                                <td>Notatki które nie są nie dokońoczone lub po prostu porzucone materiały, które mają bardzo niski priorytet albo których nie zamierzam dokończyć.</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <div onclick="Filter_By_Tag('Z Lekcji')" class="badge Tag_Purple">Z Lekcji</div> </td>
+                                                <td>Materiały wykonane w trakcie zajęc, mogą być nie dokończone, nie sprawdzone do końca, albo robione na szybko, których nie mam zamiaru formatować.</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <div onclick="Filter_By_Tag('Zadanie Domowe')" class="badge Tag_Pink">Zadanie Domowe</div> </td>
+                                                <td>Rozwiązane zadania domowe, nie gwarantuje że są dobrze.</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <div onclick="Filter_By_Tag('Nowe')" class="badge Tag_Yellow">Nowe</div> </td>
+                                                <td>Niedawno dodane materiały.</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <div onclick="Filter_By_Tag('Złe Formatowanie')" class="badge Tag_Orange">Złe Formatowanie</div> </td>
+                                                <td>Notatki nie pasujące do mojego szablonu. Nie zostaną poprawione.</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <div onclick="Filter_By_Tag('Możliwe Błędy')" class="badge Tag_Lime">Możliwe Błędy</div> </td>
+                                                <td>Notatki które bardzo prawdopodobnie zawierają błędy, zwykle przez to że nie było dostępnych materiałów na których podstawie robiłem te notatki lub przez to, że nie było żadnej informacji zwrotnej czy są one dobrze zrobione. Nie zostaną poprawione.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Element 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-heading_3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse_3" aria-expanded="false" aria-controls="panelsStayOpen-collapse_3">
+                                    Żądanie/Brak uprawnień do pliku
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapse_3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading_3">
+                                <div class="accordion-body">
+                                    Kiedy nie możesz otworzyć danej notatki, i wyświetla się komunikat o braku uprawnień (zaloguj się, wyślij e-mail z prośbą o dostęp itp.) proszę nie klikaj żadnej z tych opcji.<br>
+                                    Napisz po prostu DM na Discordzie że link nie działa.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Text -->
+                    <p>To są niektóre z moich notatek. Jak znajdę więcej czasu to może kiedyś dodam tutaj resztę.</p>
+                    <p>Nie gwarantuje że w tych notatkach nie ma błędów, czy tego że w ogóle będę to aktualizował.</p>
+                    <p>Daty przy notatkach oznaczają kiedy zostały one dodane na te stronę, nie kiedy zostały zaktualizowane czy utworzone.</p>
+                </div>
+            </div>
+
+        </div> <!-- Koniec Main-->
+        
+        <!-- Footer -->
+        <div class="p-4 text-white bg-dark">
+            <div class="container">
+                <div class="row">
+                    <!-- Grafika (Wyświetlane na rozmiarach więszych lub równych od "medium") -->
+                    <div class="col-md-3 d-none d-none d-md-block .d-lg-none">
+                        <div class="card">
+                            <img src="../Images/Avatar.svg" class="card-img-top rounded" title="Avatar.svg">
+                            
+                            <div class="card-body text-center">
+                                <h5 class="card-title Shadow_Blur text-primary">Hubsik</h5>
+
+                                <hr>
+
+                                <p class="card-text">Stronka v4<br><small>Marzec 2023 - Dziś</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabela -->
+                    <div class="col-md-9">
+                        <div class="Hr_Text">
+                            <h3>&nbsp;Linki:&nbsp;</h3>
+                        </div>
+
+                        <table class='table table-dark table-hover Footer_Table'>
+                            <tbody>
+                                <tr>
+                                    <td><b>GitHub:</b></td>
+                                    <td><a href="https://github.com/Hubsik456/Hubsik456.github.io" class="link-primary">https://github.com/Hubsik456/Hubsik456.github.io</a></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Discord:</b></td>
+                                    <td>@hubsik</td>
+                                </tr>
+                                <tr>
+                                    <td><b>E-Mail:</b></td>
+                                    <td>hubsik321@gmail.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ustawienia (Modal) -->
+        <div id="Settings" class="modal fade" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Ustawienia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <h6>Wyświetl Jako: ...</h6>
+                        <input type="radio" name="Content_Mode" id="CM_Grid" value="Grid" onchange="Save_Local_Storage(); Generate_Content_HTML_Version_Grid(Notes_Edited); Scroll_Progress()" checked>
+                        <label for="CM_Grid">Siatka</label> <br>
+
+                        <input type="radio" name="Content_Mode" id="CM_Table" value="Table" onchange="Save_Local_Storage(); Generate_Content_HTML_Version_Table(Notes_Edited); Scroll_Progress()">
+                        <label for="CM_Table">Tabela</label>
+                        
+                        <hr>
+
+                        <h6>Wyszukiwanie</h6>
+                        <input type="checkbox" id="Advanced_Filter_Checkbox" onchange="Change_Filter_Menu(); Save_Local_Storage(); Scroll_Progress()">
+                        <label for="Advanced_Filter_Checkbox">Zaawanowanie wyszukiwanie</label> <br>
+
+                        <input type="checkbox" id="Filter_Save_Results" onchange="Save_Local_Storage(); Scroll_Progress()">
+                        <label for="Filter_Save_Results">Zapisz wyniki wyszukiwania</label> <br>
+
+                        <hr>
+
+                        <p><small>Te ustawienia są zapisywane automatycznie i będą wczytywane przy następnych odwiedzinach.</small></p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll To Top (Wyświetlane na rozmiarach mniejszych lub równych od "large") -->
+        <!-- TODO: wyświetla się przyciskami "x" w menu wyszukiwania -->
+        <div class="Scroll_To_Top d-lg-none btn text-secondary-darker" title="Powrót do góry strony." onclick="Scroll_To_Top()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-square-fill " viewBox="0 0 16 16"> <!-- https://icons.getbootstrap.com/icons/arrow-up-square-fill/ -->
+                <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+            </svg>
+        </div>
+
+    </body>
+</html>
