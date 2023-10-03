@@ -25,7 +25,7 @@ Notes = [
         "Typ": "WYK",
         "Opis": "Przepisane notatki odręczne z wykładów do '.docx'.",
         "Data Dodania": "14.06.2023",
-        "Tagi": [[".docx", "Tag_Blue"], ["Długie", "Tag_Red"]],
+        "Tagi": [[".docx", "Tag_Blue"], ["Długie", "Tag_Red"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -36,7 +36,7 @@ Notes = [
         "Typ": "WYK",
         "Opis": "Zdjęcia rozwiązanych zadań z przykładów i zadań domowych.",
         "Data Dodania": "04.07.2023",
-        "Tagi": [[".jpg", "Tag_Teal"], ["Zadanie Domowe", "Tag_Pink"], ["Możliwe Błędy", "Tag_Lime"]],
+        "Tagi": [[".jpg", "Tag_Teal"], ["Zadanie Domowe", "Tag_Pink"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -47,7 +47,7 @@ Notes = [
         "Typ": "WYK",
         "Opis": "Przerobione materiały z elektroniki.",
         "Data Dodania": "14.06.2023",
-        "Tagi": [[".docx", "Tag_Blue"], ["Długie", "Tag_Red"]],
+        "Tagi": [[".docx", "Tag_Blue"], ["Długie", "Tag_Red"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -58,7 +58,7 @@ Notes = [
         "Typ": "ĆWI",
         "Opis": "Przerobione przykłady z zajęć.",
         "Data Dodania": "14.06.2023",
-        "Tagi": [["WIP", "Tag_Black"], [".xlsx", "Tag_Green"]],
+        "Tagi": [["WIP", "Tag_Black"], [".xlsx", "Tag_Green"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -69,7 +69,7 @@ Notes = [
         "Typ": "ĆWI",
         "Opis": "Zbiór najważniejszych Excelów z zajęć.",
         "Data Dodania": "14.06.2023",
-        "Tagi": [["Z Lekcji", "Tag_Purple"], [".xlsx", "Tag_Green"], ["Zadanie Domowe", "Tag_Pink"]],
+        "Tagi": [["Z Lekcji", "Tag_Purple"], [".xlsx", "Tag_Green"], ["Zadanie Domowe", "Tag_Pink"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -80,7 +80,7 @@ Notes = [
         "Typ": "ĆWI",
         "Opis": "Zbiór tematów z teorii, potrzebnych do zadań z Excela.",
         "Data Dodania": "14.06.2023",
-        "Tagi": [["WIP", "Tag_Black"], [".docx", "Tag_Blue"]],
+        "Tagi": [["WIP", "Tag_Black"], [".docx", "Tag_Blue"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -91,7 +91,7 @@ Notes = [
         "Typ": "ĆWI",
         "Opis": "Poprawiona wersja. Pojęcia i wzory potrzebne do zaliczenia.",
         "Data Dodania": "14.06.2023",
-        "Tagi": [[".docx", "Tag_Blue"]],
+        "Tagi": [[".docx", "Tag_Blue"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -102,7 +102,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Rozwiązania wszystkich zadań z labów z algorytmów.",
         "Data Dodania": "14.06.2023",
-        "Tagi": [["WIP", "Tag_Black"], [".ipynb", "Tag_Gray"]],
+        "Tagi": [["WIP", "Tag_Black"], [".ipynb", "Tag_Gray"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -113,7 +113,7 @@ Notes = [
         "Typ": "WYK",
         "Opis": "Notatka z teorii z wykładów z matematyki.",
         "Data Dodania": "14.06.2023",
-        "Tagi": [["WIP", "Tag_Black"], [".docx", "Tag_Blue"]],
+        "Tagi": [["WIP", "Tag_Black"], [".docx", "Tag_Blue"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -124,7 +124,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Excel do ćwiczenia 3, zdane na 3.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".xlsx", "Tag_Green"], ["Z Lekcji", "Tag_Purple"], ["Możliwe Błędy", "Tag_Lime"]],
+        "Tagi": [[".xlsx", "Tag_Green"], ["Z Lekcji", "Tag_Purple"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -135,7 +135,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Excel do ćwiczenia 7(✓)/5, zdane na 4.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"]],
+        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -146,7 +146,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Excel do ćwiczenia 2(✓)/6, zdane na 3.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"]],
+        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -157,7 +157,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Excel do ćwiczenia 1(✓)/8, zdane na 3.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"]],
+        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -168,7 +168,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Excel do ćwiczenia 9/10(✓), zdane na 3.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"]],
+        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
 
@@ -181,7 +181,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Spis poleceń używanych na labach i zaliczeniu z CCNA.",
         "Data Dodania": "14.06.2023",
-        "Tagi": [[".docx", "Tag_Blue"]],
+        "Tagi": [[".docx", "Tag_Blue"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -192,7 +192,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Spis tematów z wykładów z programowania, bardzo ogólnikowe.",
         "Data Dodania": "14.06.2023",
-        "Tagi": [[".docx", "Tag_Blue"]],
+        "Tagi": [[".docx", "Tag_Blue"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -203,7 +203,7 @@ Notes = [
         "Typ": "WYK",
         "Opis": "Notatki z wykładów z matematyki.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".docx", "Tag_Blue"]],
+        "Tagi": [[".docx", "Tag_Blue"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -214,7 +214,7 @@ Notes = [
         "Typ": "WYK",
         "Opis": "Notatka z wykładów z fizyki.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".docx", "Tag_Blue"], ["WIP", "Tag_Black"], ["Złe Formatowanie", "Tag_Orange"], ["Długie", "Tag_Red"]],
+        "Tagi": [[".docx", "Tag_Blue"], ["WIP", "Tag_Black"], ["Złe Formatowanie", "Tag_Orange"], ["Długie", "Tag_Red"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -225,7 +225,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Zbiór najważniejszych informacji z wstępu z programowania.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".docx", "Tag_Blue"]],
+        "Tagi": [[".docx", "Tag_Blue"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -236,7 +236,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Excel do ćw 6 z LAB Fizyki.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"]],
+        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -247,7 +247,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Excel do ćw 1 z LAB Fizyki.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"]],
+        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -258,7 +258,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Excel do ćw 2 z LAB Fizyki.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"]],
+        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -269,7 +269,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Excel do ćw 3 z LAB Fizyki.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"]],
+        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
     {
@@ -280,7 +280,7 @@ Notes = [
         "Typ": "LAB",
         "Opis": "Excel do ćw 4 z LAB Fizyki.",
         "Data Dodania": "16.07.2023",
-        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"]],
+        "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
 ]

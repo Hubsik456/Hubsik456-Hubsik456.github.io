@@ -21,6 +21,7 @@ $secondary-darker: darken($secondary, 50%);
     //? Misc Colors
 $blue-light: #46ceea;
 $lime: #4dff4d;
+$brown: #734d26;
 
     //? Accordions
 $accordion-button-color: $primary;
@@ -41,6 +42,7 @@ $theme-colors: map-merge($theme-colors, (
     "primary-light": $primary-light,
     "blue-light": $blue-light,
     "lime": $lime,
+    "brown": $brown,
 ));
 
 //! Save changes

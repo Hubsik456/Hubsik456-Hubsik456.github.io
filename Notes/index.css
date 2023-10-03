@@ -71,9 +71,13 @@ input[type="radio"]:checked + label {
     background-color: var(--bs-orange);
     color: var(--bs-black);
 }
-.Tag_Lime {
+.Tag_Lime { /* Possible Erros */
     background-color: var(--bs-lime);
     color: var(--bs-black)
+}
+.Tag_Brown { /* Full-Time / Part-Time / N/A */
+    background-color: var(--bs-brown);
+    color: var(--bs-white);
 }
 
 .KLASA_CSS { /* If no class was selected in JS code for making tags */
