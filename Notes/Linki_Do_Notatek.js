@@ -25,7 +25,7 @@ Notes = [
         "Typ": "WYK",
         "Opis": "Notatka z wykładów z Architektury Systemów Komputerowych",
         "Data Dodania": "06.10.2023",
-        "Tagi": [[".docx", "Tag_Blue"], ["Studia Zaoczne", "Tag_Brown"], ],
+        "Tagi": [[".docx", "Tag_Blue"], ["Studia Zaoczne", "Tag_Brown"], ["WIP","Tag_Black"]],
         "Autor": "Hubsik",
     },
 
