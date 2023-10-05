@@ -30,6 +30,7 @@ input[type="radio"]:checked + label {
 .badge {
     margin: 1px;
     cursor: pointer;
+    background-color: var(--bs-black);
 }
 .Tag_Blue { /* .docx */
     background-color: var(--bs-blue);

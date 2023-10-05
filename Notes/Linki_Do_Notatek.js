@@ -16,6 +16,19 @@ Notes = [
 
     //! TODO: Nowe
 
+    //! TODO: Semestr 3
+    {
+        "Nazwa": "Notatka z Architektury",
+        "Link": "https://docs.google.com/document/d/18OLh7JnnYaTIt0FhoHegtdKc3B8X5ZOW/edit?usp=sharing&ouid=100657602081476731659&rtpof=true&sd=true",
+        "Semestr": "3",
+        "Przedmiot": "Architektura Systemów Komputerowych",
+        "Typ": "WYK",
+        "Opis": "Notatka z wykładów z Architektury Systemów Komputerowych",
+        "Data Dodania": "06.10.2023",
+        "Tagi": [[".docx", "Tag_Blue"], ["Studia Zaoczne", "Tag_Brown"], ],
+        "Autor": "Hubsik",
+    },
+
     //! TODO: Semestr 2
     {
         "Nazwa": "Notatka z Algorytmów",
