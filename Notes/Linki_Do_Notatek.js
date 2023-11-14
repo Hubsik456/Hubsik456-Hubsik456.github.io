@@ -18,6 +18,17 @@ Notes = [
 
     //! TODO: Semestr 3
     {
+        "Nazwa": "Notatka z Ochrony Własności Intelektualnej",
+        "Link": "https://docs.google.com/document/d/18d2KJe2tQ6HdS6a8XxVwwL4fIjV1dMD9/edit?usp=sharing&ouid=100657602081476731659&rtpof=true&sd=true",
+        "Semestr": "3",
+        "Przedmiot": "Ochrona Własności Intelektualnej",
+        "Typ": "WYK",
+        "Opis": "Notatka z wykładów z Ochrony Własności Intelektualnej",
+        "Data Dodania": "14.11.2023",
+        "Tagi": [[".docx", "Tag_Blue"], ["Studia Zaoczne", "Tag_Brown"], ["WIP","Tag_Black"]],
+        "Autor": "Hubsik",
+    },
+    {
         "Nazwa": "Notatka z Architektury",
         "Link": "https://docs.google.com/document/d/18OLh7JnnYaTIt0FhoHegtdKc3B8X5ZOW/edit?usp=sharing&ouid=100657602081476731659&rtpof=true&sd=true",
         "Semestr": "3",
