@@ -24,7 +24,7 @@ Notes = [
         "Przedmiot": "Współczesna Kultura Informacyjna",
         "Typ": "WYK",
         "Opis": "Przepisane prezentacje z lekcji. Z pierwszej lekcji brak notatki, zajęcia były stacjonarnie.",
-        "Data Dodania": "DD.MM.YYYY",
+        "Data Dodania": "30.11.2023",
         "Tagi": [[".docx", "Tag_Blue"], ["Studia Zaoczne", "Tag_Brown"], ["WIP","Tag_Black"]],
         "Autor": "Hubsik",
     },
