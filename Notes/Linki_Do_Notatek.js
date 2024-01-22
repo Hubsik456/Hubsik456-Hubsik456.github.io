@@ -18,6 +18,17 @@ Notes = [
 
     //! TODO: Semestr 3
     {
+        "Nazwa": "Próbny Egzamin z Baz Danych",
+        "Link": "https://drive.google.com/file/d/1MyXdl5IJgShmCZb2XV5W5ueG5212xrXh/view?usp=sharing",
+        "Semestr": "3",
+        "Przedmiot": "Bazy Danych",
+        "Typ": "WYK",
+        "Opis": "Rozwiązany próbny egzamin, nie mam pojęcia czy dobrze.",
+        "Data Dodania": "22.01.2024",
+        "Tagi": [[".drawio", "Tag_Gray"], ["Studia Zaoczne", "Tag_Brown"], ["WIP","Tag_Black"]],
+        "Autor": "Hubsik",
+    },
+    {
         "Nazwa": "Notatka z Współczesnej Kultury Informacyjnej",
         "Link": "https://docs.google.com/document/d/1_GARPdVhDi9MWQlb3m5vb7jhGwCeHV0s/edit?usp=sharing&ouid=100657602081476731659&rtpof=true&sd=true",
         "Semestr": "3",
