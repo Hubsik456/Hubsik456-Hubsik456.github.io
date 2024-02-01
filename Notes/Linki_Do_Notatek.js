@@ -329,4 +329,17 @@ Notes = [
         "Tagi": [[".xlsx", "Tag_Green"], ["Możliwe Błędy", "Tag_Lime"], ["Studia Dzienne", "Tag_Brown"]],
         "Autor": "Hubsik",
     },
+
+    //! Inne
+    {
+        "Nazwa": "Szablon Notatki v2",
+        "Link": "https://docs.google.com/document/d/18tnD1zfssq7G0iGNlReyhkiozIXe29Fi/edit?usp=sharing&ouid=100657602081476731659&rtpof=true&sd=true",
+        "Semestr": "",
+        "Przedmiot": "",
+        "Typ": "",
+        "Opis": "Szablon notatki z Worda. Minimalne marginesy, stopka i nagłówek. Dodatkowy styl 'Fragment Kodu'.",
+        "Data Dodania": "01.02.2024",
+        "Tagi": [[".dotx", "Tag_Blue"]],
+        "Autor": "Hubsik",
+    },
 ]
