@@ -14,7 +14,30 @@ Notes = [
     },
     */
 
-    //! TODO: Nowe
+    //! TODO: Semestr 4
+    {
+        "Nazwa": "Notatka z wykładów z Systemów Operacyjnych",
+        "Link": "https://docs.google.com/document/d/1gckVOIk58CD4Dh7Fgydn9miVKquVXqp7/edit?usp=drive_link&ouid=100657602081476731659&rtpof=true&sd=true",
+        "Semestr": "4",
+        "Przedmiot": "Systemy Operacyjne",
+        "Typ": "WYK",
+        "Opis": "Niedokończona notatka z wykładów z systemów operacyjnych",
+        "Data Dodania": "07.04.2024",
+        "Tagi": [[".docx", "Tag_Blue"], ["Studia Zaoczne", "Tag_Brown"], ["WIP","Tag_Black"]],
+        "Autor": "Hubsik",
+    },
+    {
+        "Nazwa": "Notatka z wykładów ze SI",
+        "Link": "https://docs.google.com/document/d/1gckVOIk58CD4Dh7Fgydn9miVKquVXqp7/edit?usp=drive_link&ouid=100657602081476731659&rtpof=true&sd=true",
+        "Semestr": "4",
+        "Przedmiot": "Sztuczna Inteligencja",
+        "Typ": "WYK",
+        "Opis": "Niedokończona notatka z wykładów ze Sztucznej Inteligencji",
+        "Data Dodania": "07.04.2024",
+        "Tagi": [[".docx", "Tag_Blue"], ["Studia Zaoczne", "Tag_Brown"], ["WIP","Tag_Black"]],
+        "Autor": "Hubsik",
+    },
+
 
     //! TODO: Semestr 3
     {
