@@ -387,4 +387,17 @@ Notes = [
         "Tagi": [[".dotx", "Tag_Blue"]],
         "Autor": "Hubsik",
     },
+    
+    //! Inne
+    {
+        "Nazwa": "Materiały",
+        "Link": "https://drive.google.com/file/d/183O63whIKDIU7n-0pD1p1iYTTu67FgNb/view?usp=sharing",
+        "Semestr": "4",
+        "Przedmiot": "Szkolenie Techniczne 2",
+        "Typ": "LAB",
+        "Opis": "WIP",
+        "Data Dodania": "28.06.2024",
+        "Tagi": [["WIP", "Tag_Black"]],
+        "Autor": "Hubsik",
+    }
 ]
